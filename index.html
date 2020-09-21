@@ -14,6 +14,9 @@
      Profissão: {{usuario.profissao}}
     </div>
      <div v-else>Usuario não encontrado</div>
+     <ul>
+         <li v-for="(item, index) in linguagem">{{ index }} - {{item.nome}}</li>
+     </ul>
 </div> 
 
     <script src="https://unpkg.com/vue"></script>
@@ -26,9 +29,15 @@
                     id: 1,
                     nome: "Jon Snow",
                     profissao: "Ator",
-                }
+                },
+                linguagem: [
+                    {nome: "Javascript"},
+                    {nome: "C++"},
+                    {nome: "C#"},
+                    {nome: "Html"},
+                ]
             }
-        })
+        });
     </script>
 </body>
 </html>
