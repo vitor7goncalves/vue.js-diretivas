@@ -17,6 +17,41 @@
      <ul>
          <li v-for="(item, index) in linguagem">{{ index }} - {{item.nome}}</li>
      </ul>
+     <br><br>
+     <label for="">Nome:</label><br>
+     <input type="text" v-model="nome">
+     <br>
+     <label for="">Telefone</label><br>
+     <input type="text" v-model="telefone">
+     <br><br>
+     <label for="">Deseja receber novidades?</label>
+     <input type="radio" value="Sim" v-model="novidades">Sim
+     <input type="radio" value="Não" v-model="novidades">Não
+     <br><br>
+     <label for="">Escolha seus MMORPG's:</label><br>
+     <input type="checkbox" value="World of Warcraft" v-model="interesses">World of Warcraft <br>
+     <input type="checkbox" value="Neverwinter" v-model="interesses">Neverwinter <br>
+     <input type="checkbox" value="Path of Exile" v-model="interesses">Path Of Exile <br>
+     <input type="checkbox" value="Guild Wars 2" v-model="interesses">Guild Wars 2 <br>
+     <br>
+     <label for="">Como nos conheceu?</label>
+     <select v-model="conheceu">
+         <option value="">Escolha</option>
+         <option value="Google">Google</option>
+         <option value="E-mail">E-mail</option>
+         <option value="Youtube">Youtube</option>
+     </select>
+     <br><br>
+     <button>Enviar</button>
+    
+    <br><br>
+    _______________________________________________________________________________________________ <br>
+    Nome:{{nome}} <br>
+    Telefone:{{telefone}} <br>
+    Deseja saber novidades:{{novidades}} <br>
+    Interesses:{{interesses}} <br>
+    Como nos conheceu:{{conheceu}} 
+
 </div> 
 
     <script src="https://unpkg.com/vue"></script>
@@ -35,7 +70,13 @@
                     {nome: "C++"},
                     {nome: "C#"},
                     {nome: "Html"},
-                ]
+                ],
+                nome:"",
+                telefone:"",
+                novidades:"",
+                interesses:[],
+                conheceu:""
+
             }
         });
     </script>
