@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Storm Wizard</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .green{
+            color: green;
+        }
+        .blue{
+            color: blue;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
@@ -51,6 +62,10 @@
     Deseja saber novidades:{{novidades}} <br>
     Interesses:{{interesses}} <br>
     Como nos conheceu:{{conheceu}} 
+     <br><br>
+    <img v-bind:src="imagem" v-bind:alt="alt">
+    <br>
+    <p v-bind:class="cor">Venha jogar magus pocus!</p>
 
 </div> 
 
@@ -75,8 +90,12 @@
                 telefone:"",
                 novidades:"",
                 interesses:[],
-                conheceu:""
+                conheceu:"",
 
+                imagem: "Cena final8.png",
+                alt:"magus",
+
+                cor: "blue",
             }
         });
     </script>
